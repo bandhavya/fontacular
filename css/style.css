@@ -1,0 +1,158 @@
+@import url(http://weloveiconfonts.com/api/?family=typicons);
+
+/*==============================
+=            Layout            =
+==============================*/
+* {
+  margin:0;
+  padding:0;
+  text-decoration:none;
+  -webkit-box-sizing:border-box;
+     -moz-box-sizing:border-box;
+          box-sizing:border-box;
+}
+body,
+html {
+  height:100%;
+  width:100%;
+}
+body {
+  background:url(http://subtlepatterns.com/patterns/geometry2.png);
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.container {
+  max-width:80%;
+  margin:0 auto;
+}
+.content {
+  padding-top:200px;
+}
+/*-----  End of Layout  ------*/
+
+
+
+/* ==============================
+=            Header            =
+============================== */
+.page-header {
+  position:fixed;
+  background:#333;
+  z-index:11;
+  width:100%;
+  box-shadow:0 0 20px 0;
+}
+.title {
+  font-family:"Open Sans", sans-serif;
+  background-image:-webkit-linear-gradient(top, #fff, #888);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight:100;
+  font-size:48px;
+  color:#fff;
+}
+/* -----  End of Header  ------ */
+
+/* ========================================
+=            Fonts List           =
+======================================== */
+
+.font-preview {
+  font-size:72px;
+  margin-top:20px;
+  width:100%;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+}
+.font {
+  list-style:none;
+  border-top:2px dotted #000;
+  -webkit-transition:0.2s;
+     -moz-transition:0.2s;
+      -ms-transition:0.2s;
+       -o-transition:0.2s;
+          transition:0.2s;
+}
+.font-data {
+  padding:10px;
+  background:rgba(0,0,0,0.1);
+  font-weight:100;
+}
+.font-data > span {
+  margin-right:20px;
+}
+.font-data a {
+  color:#222;
+}
+.font-data a:hover {
+  color:#4b8df9;
+}
+.font-variants {
+  font-size:12px;
+}
+.font-category {
+  text-transform:capitalize;
+}
+/* -----  End of Fonts List ------ */
+
+/* ===================================
+=            Search Area            =
+=================================== */
+
+.search-bar input,
+.content-bar input {
+  padding:10px;
+  border:1px solid;
+  width:100%;
+}
+
+/* -----  End of Search Area  ------ */
+
+/* ==========  SMALL DEVICES  ========== */
+@media screen and (max-width:767px) {
+  .tagline {
+    display:none;
+  }
+  .page-header ul {
+    text-align:left;
+    padding-left:10px;
+    display:none;
+  }
+  .content {
+    padding-top:83px;
+  }
+}
+/*=============================
+=            Icons            =
+=============================*/
+[class*="typicons-"]:before {
+  font-family:"Typicons", sans-serif;
+}
+/*-----  End of Icons  ------*/
+
+
+
+/*===============================
+=            Helpers            =
+===============================*/
+
+/*==========  Floats  ==========*/
+.cf:before,
+.cf:after {
+  content:" ";
+  display:table;
+}
+.cf:after {
+  clear:both;
+}
+.cf {
+  *zoom:1;
+}
+.pull-left {
+  float:left;
+}
+.pull-right {
+  float:right;
+}
+
+/*-----  End of Helpers  ------*/

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="QuickFont">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>QuickFont</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:100,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body ng-controller="FontsListController">
+    <header class="page-header">
+        <h1 class="title pull-left">QuickFont</h1>
+        <label style="color:white">Select Styles:
+            <select ng-model="selectedStyle.category">
+                <option value="">All Styles</option>
+                <option ng-repeat="category in fontCategories" value="{{category}}">{{category.replace("-"," ") | uppercase}}</option>
+            </select>
+        </label>
+        <br/>
+        <div style="width:100%;display: inline-block;">
+            <div class="content-bar" style="width:40%;display: inline-block;">
+                <input type="text" width=70% ng-model="text_content" autocomplete="on" placeholder="Enter Your text.">
+            </div>
+            <div class="search-bar" style="width:40%;display: inline-block;float:right;">
+                <input type="search" ng-model="searchText.family" placeHolder="search...">
+            </div>
+        </div>
+    </header>
+    <!--Container -->
+    <div class="container">
+        <!-- Content -->
+        <div class="content">
+            <div ng-view=""></div>
+        </div>
+        <!-- Content End -->
+    </div>
+    <!-- Container End-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/font.js"></script>
+</body>
+
+</html>

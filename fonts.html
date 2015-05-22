@@ -1,0 +1,15 @@
+<ul class="fonts-list">
+    <li class="font" data-category="{{font.category}}" data-family="{{font.family}}" ng-repeat="font in fontsList |filter : searchText| filter:selectedStyle.category ">
+        <link rel="stylesheet" href={{font.url}} type="text/css" />
+        <div class="font-data cf">
+            <span class="font-name"><strong>Name : </strong>{{font.family}}</span>
+            <span><strong>Category : </strong><span class="font-category">{{font.category.replace("-"," ")}}</span></span>
+            <span><strong>Styles : </strong><span class="font-variants">{{font.variantString}}</span></span>
+
+            <a target="_blank" title= "Font Usage" href="{{font.quickUseUrl}}" class="pull-right font-usage-link"><span class="typicons-export"></span></a>
+        </div>
+        <div class="font-preview" style="font-family:{{font.family}}">
+        	{{text_content}}
+        </div>
+    </li>
+</ul>
